@@ -1,0 +1,62 @@
+{
+  "source_document": "knowledge_source/Project docs\\Hiring Assistant Docs\\HA_BRD_test.docx",
+  "generated_at": "2026-08-03T09:14:30.601642Z",
+  "entries": [
+    {
+      "question": "What functional modules are listed in the Product Module Design?",
+      "answer": "The design includes modules such as HM/TA portal UI/UX, SRF Creation with real‑time AI recommendations, JD optimization (AI), JD publishing, Talent‑Pool Management, Candidate Sourcing, Candidate Screening (AI), Candidate Scoring (AI with dynamic weightage), Candidate Portal UI/UX, AI‑Assessment creation and execution, SRF and Candidate status dashboards, communication and notifications, interview scheduling, interview panel management, dashboard views, and logging/event management.",
+      "contexts": [
+        "Product Module Design:\n\nBased on the BRD, I have broken down the Product platform into specific functional modules in sequence of build requirement.\n\nHM/TA portal – UI/UX\n\nSRF Creation (with real-time AI recommendations)\n\nJD optimization – AI module\n\nJD publishing – Internal/External\n\nTalent-Pool Management\n\nCandidate Sourcing – Direct/Internal/External\n\nCandidate Screening – AI module\n\nCandidate Scoring (matching to SRF) – AI module with dynamic weightage selection.\n\nCandidate Portal – UI/UX\n\nAI-Assessment – Create questionnaire\n\nAI-Assessment – MCQ/subjective with support for code writing etc.\n\nSRF Status updates and Dashboard\n\nCandidate Status updates and Dashboard\n\nCommunication and notifications – template and AI driven\n\nInterview scheduling – AI driven\n\nInterview Panel management\n\nDashboard views and extracts\n\nLogging and event management"
+      ]
+    },
+    {
+      "question": "How does the system provide AI‑driven skill recommendations during SRF creation?",
+      "answer": "It integrates an AI module in real time with the user interface to deliver AI‑driven skill recommendations and set up assessment questions for the SRF, a capability that is not possible in ORC.",
+      "contexts": [
+        "Flow starts with SRF Creation:  - Module A – Job Description/SRF Creation:\nThe above flow indicates a Real-time integration of AI module to the user‑interface, for AI‑driven skill recommendations and setup Assessment questions for the SRF, which is not possible in ORC."
+      ]
+    },
+    {
+      "question": "What actions can a Hiring Manager take after setting up an SRF?",
+      "answer": "The Hiring Manager can cancel the SRF, mark it as ‘Fulfilled Internally’ and close it, or tag it to TA for further actions.",
+      "contexts": [
+        "After setting up the SRF, Hiring Manager (HM) will then be able to either\n\n'Cancel’ it, if required.\n\nOr\n\nmark it as ‘Fulfilled Internally’ and ‘Closed’.\n\nOr\n\n‘Tagged to TA’ for further actions."
+      ]
+    },
+    {
+      "question": "How are timestamps used in the HA platform according to the discussion on 23rd June 2025?",
+      "answer": "All user actions related to flows are verified and tracked with timestamps, which can later be used for audits.",
+      "contexts": [
+        "All User actions, related to flows will be verified and tracked with timestamps; which can be used for audits latter on."
+      ]
+    },
+    {
+      "question": "When is a candidate excluded from AI‑recommended lists for other SRFs?",
+      "answer": "A candidate already tagged to an open SRF with status ‘Application in progress’ or ‘Ready for Scoring’ is excluded from recommendations for any other SRF until the previous SRF is closed or the candidate is un‑tagged.",
+      "contexts": [
+        "If Candidate is already tagged to an Open SRF with status set to ‘Application in progress’ or ‘Ready for Scoring’, then he will be excluded from recommendations for any other SRF until:\nThe previous SRF is Closed.\nThe candidate is ‘not-selected’ and so untagged from the SRF."
+      ]
+    },
+    {
+      "question": "What happens if a shortlisted candidate does not apply within the specified date‑range?",
+      "answer": "The system marks the candidate as ‘Not‑interested’ for the tagged SRF.",
+      "contexts": [
+        "If no apply is registered for the date range; system will mark the candidate as ‘Not-interested’ for the tagged SRF."
+      ]
+    },
+    {
+      "question": "What steps does the platform follow when a candidate completes the AI assessment and meets the minimum criteria?",
+      "answer": "The candidate is marked as ‘Assessed Proceed’, their details are collected for a panel interview, an email invitation with interview availability slots is sent, the candidate is marked as ‘Ready for Panel Interview’, and a notification is triggered to HA and COE to assign an interview panel.",
+      "contexts": [
+        "If candidate completes the AI assessment, check if they meet Assessment minimum criteria:\nIf No; mark candidate as ‘Assessed Rejected’.\nIf Yes;\n\nmark candidate as ‘Assessed Proceed’.\nCollect candidate details for Panel Interview.\nEmail-ID for interview invite (outlook/external)\nAvailability-slot for interview – date/time.\nMark candidate as ‘Ready for Panel Interview’.\nTrigger a notification the HA and COE to assign Interview panel for selected availability slots."
+      ]
+    },
+    {
+      "question": "How does the system handle a candidate’s request to reschedule an interview?",
+      "answer": "It sends a notification to the Hiring Manager and COE to update available slots and panel members, and the candidate’s status is changed to ‘Reschedule requested’.",
+      "contexts": [
+        "If candidate initiates a reschedule from the portal – send notification to the HM, COE to update available slots and panellists. Mark the candidate as ‘Reschedule requested’."
+      ]
+    }
+  ]
+}

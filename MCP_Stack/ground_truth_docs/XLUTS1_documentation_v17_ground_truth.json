@@ -1,0 +1,50 @@
+{
+  "source_document": "knowledge_source/Legacy docs\\XLUTS1_documentation_v17.docx",
+  "generated_at": "2026-08-03T15:48:12.902807Z",
+  "entries": [
+    {
+      "question": "What is the primary purpose of job XLUTS1?",
+      "answer": "To sweep the IDMS database for active Flexi policies of a specific segment and extract key contract, account balance, premium, and role data to a flat file for downstream reporting and interface feeds.",
+      "contexts": [
+        "This job is part of the Flexi policy data extract process. It sweeps the IDMS database for active Flexi policies belonging to a specific segment (passed at runtime via JCL PARM) and extracts key contract, account balance, premium, and role data to a flat file for downstream reporting and interface feeds."
+      ]
+    },
+    {
+      "question": "Which domain and view does the job use to access Flexi policy data?",
+      "answer": "It uses the OMUIO domain LUDMNT05 and the view LUVVR001.",
+      "contexts": [
+        "- OMUIO domain LUDMNT05 is the Flexi policy administration domain\n- View LUVVR001 contains the core policy/contract master records (LU201 layout)"
+      ]
+    },
+    {
+      "question": "How is the segment number supplied to the job at runtime?",
+      "answer": "The segment number is passed from the JCL PARM field as the linkage parameter L1-SEGNUM-PARAMETERS.",
+      "contexts": [
+        "The segment number (%%SEG in JCL) identifies a business segment — e.g. a product line or region",
+        "The program receives the following runtime parameter(s) via its linkage section: L1-SEGNUM-PARAMETERS. These are passed from the JCL PARM field at execution time."
+      ]
+    },
+    {
+      "question": "What is the length of each output record and what components does it contain?",
+      "answer": "Each output record is 665 bytes long and includes contract master (32), account balance (60), contract admin (96), premium admin (312), contract role (53), and change admin (112).",
+      "contexts": [
+        "Record length 665 bytes covers: contract master (32), account balance (60), contract admin (96), premium admin (312), contract role (53), change admin (112)"
+      ]
+    },
+    {
+      "question": "Which policy status marker causes a policy to be excluded from the extract?",
+      "answer": "Policies with status marker '7' (PRM‑ST‑MKR) are excluded.",
+      "contexts": [
+        "Policies with status marker '7' (PRM-ST-MKR) are excluded — these are cancelled/lapsed",
+        "CA-START: Applies filter/check: W40-LAST3 = 0; WLU201-PRM-ST-MKR = '7'."
+      ]
+    },
+    {
+      "question": "What could happen if segment filtering is performed incorrectly?",
+      "answer": "Incorrect segment filtering would result in wrong policies being included in the extract, affecting downstream reporting jobs and interface files.",
+      "contexts": [
+        "Incorrect segment filtering would result in wrong policies being included in the extract."
+      ]
+    }
+  ]
+}

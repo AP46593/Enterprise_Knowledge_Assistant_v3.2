@@ -1,0 +1,76 @@
+{
+  "source_document": "knowledge_source/Legacy docs\\XYPW015_documentation_v4.docx",
+  "generated_at": "2026-08-03T09:14:03.624707Z",
+  "entries": [
+    {
+      "question": "What is the business purpose of the XYPW015 job?",
+      "answer": "To process and analyze asset performance data from various sources, generating key metrics for reporting and decision‑making.",
+      "contexts": [
+        "The XYPW015 job is designed to process and analyze asset performance data from various sources, generating key metrics for reporting and decision-making purposes."
+      ]
+    },
+    {
+      "question": "Which table does the job initially load asset rate information from?",
+      "answer": "The job initially loads asset rate information from the table YP_SS_ASSRATE.",
+      "contexts": [
+        "The job begins by loading asset rate information from a table called YP_SS_ASSRATE."
+      ]
+    },
+    {
+      "question": "Where are the generated metrics written after processing?",
+      "answer": "The generated metrics are written to the table YP_ASSET_INDEX.",
+      "contexts": [
+        "Finally, the job writes the generated metrics to a table called YP_ASSET_INDEX, which serves as a central repository for asset performance data."
+      ]
+    },
+    {
+      "question": "What type of data does the OBJECTSTAR rule read from the external file?",
+      "answer": "It reads employee assignment rates for a specific period.",
+      "contexts": [
+        "The rule starts by reading data from an external file, which contains information about employee assignment rates for a specific period."
+      ]
+    },
+    {
+      "question": "What does the rule do if the input file is empty or contains no data?",
+      "answer": "It logs an error message and sets the session end status to 16, indicating that the import failed.",
+      "contexts": [
+        "If the input file is empty or has no data, the rule will log an error message and set the session end status to 16 (indicating that the import failed)."
+      ]
+    },
+    {
+      "question": "Which sub‑rules are called by the main OBJECTSTAR rule?",
+      "answer": "The sub‑rules YP_ANN_ASS_IMP1 and YP_ANN_ASS_INDEX are called.",
+      "contexts": [
+        "This rule delegates processing to the following sub-rules: YP_ANN_ASS_IMP1, YP_ANN_ASS_INDEX."
+      ]
+    },
+    {
+      "question": "What is the purpose of the DEL_ANYTABLE procedure in this rule?",
+      "answer": "It deletes all records from the YP_SS_ASSRATE table before new data is loaded.",
+      "contexts": [
+        "The rule first deletes all records in the table using the DEL_ANYTABLE procedure."
+      ]
+    },
+    {
+      "question": "How does the rule handle a GET failure on YP_SS_ASSRATE?",
+      "answer": "It logs an error message and sets the session end status to 16 using the $SETSESSIONEND function.",
+      "contexts": [
+        "If an error occurs while getting the records from the \"YP_SS_ASSRATE\" table, the rule will enter a special section called \"ON GETFAIL\". In this section, it logs an error message and sets the session end status to 16 using the `$SETSESSIONEND` function."
+      ]
+    },
+    {
+      "question": "During the processing loop, which variable is incremented for each record in YP_IMP_ASSRATE?",
+      "answer": "The variable COUNT is incremented by 1 for each record.",
+      "contexts": [
+        "The rule then enters a loop that iterates over all records in a table called \"YP_IMP_ASSRATE\". For each record, it performs the following actions: * Increment the value of `COUNT` by 1."
+      ]
+    },
+    {
+      "question": "According to the Technical Flow section, how many tables are involved in the XYPW015 job?",
+      "answer": "Five tables are involved.",
+      "contexts": [
+        "Technical Flow\n\nJCL: XYPW015  |  Steps: 1  |  Programs: 0  |  Tables: 5"
+      ]
+    }
+  ]
+}

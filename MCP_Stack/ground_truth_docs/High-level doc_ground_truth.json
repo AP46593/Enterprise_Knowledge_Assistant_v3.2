@@ -1,0 +1,77 @@
+{
+  "source_document": "knowledge_source/Project docs\\Hiring Assistant Docs\\High-level doc.docx",
+  "generated_at": "2026-08-03T09:15:24.636075Z",
+  "entries": [
+    {
+      "question": "What challenges do legacy mainframe systems face according to the Executive Summary?",
+      "answer": "They suffer from documentation gaps, slow development cycles, limited modernization agility, and a heavy knowledge dependency on senior engineers.",
+      "contexts": [
+        "Legacy mainframe systems built on COBOL, DB2, IMS DB, and JCL are mission-critical but face challenges in:\n\nDocumentation gaps\n\nSlow development cycles\n\nLimited modernization agility\n\nKnowledge dependency on senior engineers"
+      ]
+    },
+    {
+      "question": "Which AI tools are recommended as the primary reasoning engine and for developer productivity?",
+      "answer": "Claude is recommended as the primary reasoning engine, while GitHub Copilot is recommended to boost developer productivity.",
+      "contexts": [
+        "Recommendation\n\nPrimary reasoning engine: Claude\n\nDeveloper productivity: GitHub Copilot"
+      ]
+    },
+    {
+      "question": "How does the proposed AI‑assisted SDLC handle extraction of mainframe code and its reintegration?",
+      "answer": "Code is extracted from the mainframe (PDS/Endevor), stored in a Git‑based repository, processed by AI agents for various SDLC tasks, reviewed and validated, then the refined code or artifacts are pushed back to the mainframe.",
+      "contexts": [
+        "Flow\n\nExtract code from Mainframe (PDS/Endevor)\nStore in Git-based repository (structured format)\nRun AI agents for different SDLC tasks\nReview & validate outputs\nPush back refined code / artifacts",
+        "Key Strategy: Code Extraction Layer\n\nUse tools/scripts to extract:\nCOBOL programs\nJCL\nDB2 DDL\nIMS definitions\nStore as:\nGit repositories\nStructured JSON/text inputs"
+      ]
+    },
+    {
+      "question": "What capabilities does the Document Generation AI assistant provide?",
+      "answer": "It can automatically generate functional and technical documentation, including program summaries, data flow diagrams for DB2 tables and IMS segments, JCL job documentation, and dependency mapping.",
+      "contexts": [
+        "4.1 Document Generation\n\nObjective: Auto-generate functional & technical documentation\nCapabilities:\nProgram summaries (COBOL logic explanation)\nData flow (DB2 tables, IMS segments)\nJCL job documentation\nDependency mapping"
+      ]
+    },
+    {
+      "question": "Which tools are suggested for code build and refactoring tasks?",
+      "answer": "GitHub Copilot, Claude, and Codex are suggested for code build and refactoring, providing inline suggestions, deep refactoring recommendations, and batch transformations.",
+      "contexts": [
+        "4.2 Code Build & Refactoring\n\nRecommended Tools:\nGitHub Copilot\nInline suggestions (if editing outside mainframe)\nDeveloper productivity boost\nClaude / Codex\nDeep refactoring recommendations\nBatch transformations"
+      ]
+    },
+    {
+      "question": "What optimization strategies are targeted and which AI tool is highlighted for performance analysis?",
+      "answer": "The proposal targets SQL optimization, JCL performance tuning, batch job optimization, and IMS access‑pattern improvements, with Claude highlighted for its strong reasoning in performance analysis.",
+      "contexts": [
+        "4.3 Optimization Strategies\n\nCapabilities:\nSQL optimization (DB2 queries)\nJCL performance tuning\nBatch job optimization\nIMS access pattern improvements\nRecommended Tools:\nClaude → Strong reasoning for performance analysis\nCodex → Pattern-based optimization"
+      ]
+    },
+    {
+      "question": "How does the proposal ensure quality review and code standardization?",
+      "answer": "It uses a hybrid approach that combines a rule‑based engine for deterministic checks with LLMs for semantic checks, covering coding‑standard validation, anti‑pattern detection, security checks, and complexity scoring.",
+      "contexts": [
+        "4.5 Quality Review & Code Standardization\n\nCapabilities:\nCoding standard validation (naming, structure)\nAnti-pattern detection\nSecurity checks (e.g., SQL injection risks in dynamic SQL)\nComplexity scoring\nRecommended Tools:\nHybrid approach:\nRule-based engine (deterministic checks)\nLLM (semantic checks)"
+      ]
+    },
+    {
+      "question": "What are the main agents in the AI Agent Framework and what do they output?",
+      "answer": "The framework includes a Documentation Agent (produces structured documentation from COBOL/JCL/DDL), a Refactoring Agent (outputs an improved modular version of legacy code), an Optimization Agent (delivers performance improvements for SQL/JCL), a Test Generation Agent (creates test scenarios from business logic), and a Quality Gate Agent (reports violations and recommendations for the codebase).",
+      "contexts": [
+        "Agent Types\n\nDocumentation Agent\nInput: COBOL/JCL/DDL\nOutput: Structured documentation\n\nRefactoring Agent\nInput: Legacy code\nOutput: Improved modular version\n\nOptimization Agent\nInput: SQL/JCL\nOutput: Performance improvements\n\nTest Generation Agent\nInput: Business logic\nOutput: Test scenarios\n\nQuality Gate Agent\nInput: Codebase\nOutput: Violations + recommendations"
+      ]
+    },
+    {
+      "question": "What governance and risk controls are proposed for AI‑generated outputs?",
+      "answer": "The proposal includes human‑in‑the‑loop validation, standardized prompt templates, secure handling of sensitive data, version control for AI‑generated artifacts, and audit logs for AI decisions.",
+      "contexts": [
+        "8. Governance & Risk Controls\n\nHuman-in-the-loop validation\nPrompt templates for consistency\nSecure handling of sensitive data\nVersion control for AI-generated outputs\nAudit logs for AI decisions"
+      ]
+    },
+    {
+      "question": "What productivity and documentation speed improvements are expected from the AI‑assisted approach?",
+      "answer": "The initiative aims for 40–60% faster documentation and a 30–50% improvement in developer productivity.",
+      "contexts": [
+        "9. Expected Benefits\n\n40–60% faster documentation\n30–50% improvement in developer productivity"
+      ]
+    }
+  ]
+}

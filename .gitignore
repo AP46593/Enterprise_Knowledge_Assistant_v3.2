@@ -1,0 +1,46 @@
+# Environment variables (secrets)
+.env
+
+# Knowledge base storage (generated data)
+MCP_Stack/knowledge_base/
+!MCP_Stack/knowledge_base/.gitkeep
+
+# Pickle files (BM25 index)
+*.pkl
+
+# Cache directory
+MCP_Stack/cache/
+!MCP_Stack/cache/.gitkeep
+
+# Log directories
+MCP_Stack/Server_Logs/
+!MCP_Stack/Server_Logs/.gitkeep
+Client_Logs/
+!Client_Logs/.gitkeep
+
+# Virtual environments
+.venv/
+.mcpvenv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.hypothesis/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

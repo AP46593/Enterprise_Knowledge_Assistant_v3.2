@@ -1,0 +1,69 @@
+{
+  "source_document": "knowledge_source/Project docs\\Hiring Assistant Docs\\HA_Scoring.docx",
+  "generated_at": "2026-08-03T09:14:57.725207Z",
+  "entries": [
+    {
+      "question": "What is the main purpose of separating the screening and matching actions in the Hiring-Assistant system?",
+      "answer": "To decouple screening and matching, allowing them to be handled as separate processes.",
+      "contexts": [
+        "Purpose of this process: Decouple Screening and Matching actions on the system."
+      ]
+    },
+    {
+      "question": "When is candidate matching typically initiated according to the SRF life-cycle?",
+      "answer": "After the SRF has been posted for a few preset number of days and based on criteria such as accumulated candidates or when the SRF is closed to applications.",
+      "contexts": [
+        "Normally, during the SRF life-cycle, matching is only requested/initiated after the srf has been posted for a few pre-set numbers of days. This is controlled by the Hiring Manager based on many criterias like The SRF has accumulated a certain number of active/prospective candidates. Candidate matching may only begin after the SRF is closed to applications so that we have a closed set of candidates to review."
+      ]
+    },
+    {
+      "question": "What are the two ways the screening process can be initiated?",
+      "answer": "User-triggered from the HA platform with a valid SRF ID, or a scheduled daily process for all active SRFs.",
+      "contexts": [
+        "This process would be initiated via 2 methods: User triggered, from HA platform taking a valid SRF id as input. Or A scheduled daily process will run on HA for all SRFs on ORC, which are currently Active for candidates to apply for."
+      ]
+    },
+    {
+      "question": "In the user-initiated workflow, what status is set in the SRF-Details table after the user clicks “Fetch Candidate list” for the first time?",
+      "answer": "'Screening in process'.",
+      "contexts": [
+        "User will refresh the page, and it should show a table with SRF-details with HA-Process-Status set to ‘Screening in process’."
+      ]
+    },
+    {
+      "question": "After the screening process completes, what button becomes available to the user on the SRF detail page?",
+      "answer": "The ‘Show Candidates’ button.",
+      "contexts": [
+        "Once the screening process completes, the page should show the status as ‘Screened’ with a button to ‘Show Candidates’, which will take them to the Candidate-list page for that SRF..."
+      ]
+    },
+    {
+      "question": "During the scheduled workflow, what HA-Process-Status is assigned to SRFs fetched from ORC?",
+      "answer": "'Initiated by system'.",
+      "contexts": [
+        "Fetch all SRFs from ORC in Active/open to application state and add/update SRD-Details table in HA platform with HA-Process-Status set to ‘Initiated by system’."
+      ]
+    },
+    {
+      "question": "Which internal table stores the status of each SRF for the screening dashboard?",
+      "answer": "The SRF-Details Table.",
+      "contexts": [
+        "Internal Tables to be maintained by HA-Platform: SRF-Details Table, stores all SRFs fetched into the system for Candidate Screening with a HA-Process-Status field which will be used to Screening Dash-board Per SRF."
+      ]
+    },
+    {
+      "question": "What values can the Candidate_Status field have after screening, and what do they indicate?",
+      "answer": "'Ready for matching' if all relevant data is available; 'Missing_Data' if required data is absent.",
+      "contexts": [
+        "Candidate_Status: assigned Ready for matching if all relevant data available ( like resume). Else Missing_Data, if data missing on ORC."
+      ]
+    },
+    {
+      "question": "What functionality does the “Rerun-screening” button provide on the Candidate-List page?",
+      "answer": "It calls the fetch_candidate API from ORC to refresh candidate details, re‑screen them, and update the Candidate_Screening_Data table.",
+      "contexts": [
+        "For each candidate record (or multi-select) on the view – There must be a ‘Rerun-screening’ button; which should call the fetch_candidate API from ORC to refresh all candidate details, screen it again and populate on Candidate_Screening_Data table."
+      ]
+    }
+  ]
+}
